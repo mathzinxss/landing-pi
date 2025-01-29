@@ -31,10 +31,10 @@ export const Header = () => {
           <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
         </div>
       </div>
-      <div className='container p-3 mx-auto relative lg:text-sm'>
+      <div className='container p-3 mx-auto relative lg:text-sm items-center'>
         <div className='flex justify-between items-center'>
           <div className='flex items-center flex-shrink-0'>
-            <Image className='h-10 w-10 mr-2 mb-3' src={logo} alt="logo" />
+            <Image className='h-10 w-10 mr-2 items-center' src={logo} alt="logo" />
             <a href='#' className='text-xl tracking-tight hidden lg:flex'>Aretis</a>
           </div>
           <ul className="hidden lg:flex gap-4">
