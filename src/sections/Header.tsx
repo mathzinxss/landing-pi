@@ -29,7 +29,7 @@ export const Header = () => {
         <p className="text-white/60 hidden lg:flex">Simplifique seu fluxo de trabalho e aumente sua produtividade</p>
         <div className="inline-flex gap-1 items-center">
           <p>Começe agora</p>
-          <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
+          <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" / >
         </div>
       </div>
       {/* Navbar Inferior */}
@@ -46,7 +46,7 @@ export const Header = () => {
               </li>
             ))}
           </ul>
-          <button className="hidden lg:flex justify-center bg-black text-white rounded-lg font-medium p-2 tracking-tight">Obtenha de graça</button>
+          <button className="hidden lg:flex rounded-lg font-medium p-2 tracking-tight">Obtenha de graça</button>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button
               onClick={toggleNavbar}
@@ -60,9 +60,9 @@ export const Header = () => {
         {/* Menu Mobile */}
 
         {mobileDrawerOpen && (
-          <div className="mt-3 fixed right-0 bg-gradient-to-r from-transparent via-white/10 to-transparent w-full p-12 flex flex-col justify-center items-center lg:hidden " onClick={toggleNavbar}>
+          <div className="mt-3 fixed right-0 z-20 bg-background/80 w-full p-12 flex flex-col justify-center items-center lg:hidden" onClick={toggleNavbar}>
             <div className="" onClick={(e) => e.stopPropagation()}> {/*// Impede que o clique no menu feche ele */}
-              <ul>
+              <ul className="items-center justify-center flex flex-col">
                 {menu.map((data) => (
                   <li key={data.id} className="py-4">
                     <a href={data.link}>{data.name}</a>
