@@ -60,7 +60,7 @@ export const Header = () => {
         {/* Menu Mobile */}
 
         {mobileDrawerOpen && (
-          <div className="mt-3 fixed right-0 z-20 bg-[#f5f7ff]/80 w-full p-12 flex flex-col justify-center items-center lg:hidden" onClick={toggleNavbar}>
+          <div className="mt-3 fixed right-0 z-20 bg-[#f5f7ff]/85 w-full p-12 flex flex-col justify-center items-center lg:hidden" onClick={toggleNavbar}>
             <div className="" onClick={(e) => e.stopPropagation()}> {/*// Impede que o clique no menu feche ele */}
               <ul className="items-center justify-center flex flex-col">
                 {menu.map((data) => (
