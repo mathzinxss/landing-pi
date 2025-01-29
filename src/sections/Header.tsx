@@ -23,7 +23,7 @@ export const Header = () => {
   }
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-lg border-b border-neutral-700/80">
+    <header className="sticky top-0 z-50 backdrop-blur-md border-b border-neutral-700/80">
       {/* Navbar Superior*/}
       <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
         <p className="text-white/60 hidden lg:flex">Simplifique seu fluxo de trabalho e aumente sua produtividade</p>
@@ -46,7 +46,7 @@ export const Header = () => {
               </li>
             ))}
           </ul>
-          <button className="hidden lg:flex rounded-lg font-medium p-2 tracking-tight">Obtenha de graça</button>
+          <button className="hidden lg:flex bg-black text-white rounded-lg font-medium p-2 tracking-tight">Obtenha de graça</button>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button
               onClick={toggleNavbar}
