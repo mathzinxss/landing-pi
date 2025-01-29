@@ -24,6 +24,7 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-lg border-b border-neutral-700/80">
+      {/* Navbar Superior*/}
       <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
         <p className="text-white/60 hidden lg:flex">Simplifique seu fluxo de trabalho e aumente sua produtividade</p>
         <div className="inline-flex gap-1 items-center">
@@ -31,6 +32,7 @@ export const Header = () => {
           <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
         </div>
       </div>
+      {/* Navbar Inferior */}
       <div className='container p-3 mx-auto relative lg:text-sm items-center'>
         <div className='flex justify-between items-center'>
           <div className='flex items-center flex-shrink-0'>
@@ -54,21 +56,28 @@ export const Header = () => {
             </button>
           </div>
         </div>
+
+        {/* Menu Mobile */}
+
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 w-full p-12 flex flex-col justify-center items-center lg:hidden">
-            <ul>
-              {menu.map((data) => (
-                <li key={data.id} className='py-4'>
-                  <a href={data.link}>{data.name}</a>
-                </li>
-              ))}
-            </ul>
-            <div className="flex space-x-6 mt-2">
-              <a href="#" className="py-2 px-3 border rounded-md">Entrar</a>
-              <a href="#" className=" py-2 px-3 rounded-md bg-black text-white">Obtenha Agora</a>
+          <div className="mt-3 fixed right-0 bg-gradient-to-r from-transparent via-white/10 to-transparent w-full p-12 flex flex-col justify-center items-center lg:hidden " onClick={toggleNavbar}>
+            <div className="" onClick={(e) => e.stopPropagation()}> {/*// Impede que o clique no menu feche ele */}
+              <ul>
+                {menu.map((data) => (
+                  <li key={data.id} className="py-4">
+                    <a href={data.link}>{data.name}</a>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex space-x-6 mt-2">
+                <a href="#" className="py-2 px-3 border rounded-md">Entrar</a>
+                <a href="#" className="py-2 px-3 rounded-md bg-black text-white">Obtenha Agora</a>
+              </div>
             </div>
           </div>
         )}
+
+
       </div>
     </header>
   );
