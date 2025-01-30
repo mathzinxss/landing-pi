@@ -23,7 +23,7 @@ export const Header = () => {
   }
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md border-b border-neutral-700/80">
+    <header className="sticky top-0 z-50 backdrop-blur-md border-b border-neutral-300">
       {/* Navbar Superior*/}
       <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
         <p className="text-white/60 hidden lg:flex">Simplifique seu fluxo de trabalho e aumente sua produtividade</p>
