@@ -1,55 +1,87 @@
+'use client'
+
+import CheckImage from '@/assets/check.svg'
+
 const pricingTiers = [
   {
     title: "Free",
     monthlyPrice: 0,
-    buttonText: "Get started for free",
+    buttonText: "Comece gratuitamente",
     popular: false,
     inverse: false,
     features: [
-      "Up to 5 project members",
-      "Unlimited tasks and projects",
-      "2GB storage",
-      "Integrations",
-      "Basic support",
+      "Até 5 membros do projeto",
+      "Tarefas e projetos ilimitados",
+      "Armazenamento de 2GB",
+      "Integrações",
+      "Suporte básico",
     ],
   },
   {
     title: "Pro",
     monthlyPrice: 9,
-    buttonText: "Sign up now",
+    buttonText: "Inscreva-se agora",
     popular: true,
     inverse: true,
     features: [
-      "Up to 50 project members",
-      "Unlimited tasks and projects",
-      "50GB storage",
-      "Integrations",
-      "Priority support",
-      "Advanced support",
-      "Export support",
+      "Até 50 membros do projeto",
+      "Tarefas e projetos ilimitados",
+      "50 GB de armazenamento",
+      "Integrações",
+      "Suporte prioritário",
+      "Suporte avançado",
+      "Suporte à exportação",
     ],
   },
   {
     title: "Business",
     monthlyPrice: 19,
-    buttonText: "Sign up now",
+    buttonText: "Inscreva-se agora",
     popular: false,
     inverse: false,
     features: [
-      "Up to 5 project members",
-      "Unlimited tasks and projects",
-      "200GB storage",
-      "Integrations",
-      "Dedicated account manager",
-      "Custom fields",
-      "Advanced analytics",
-      "Export capabilities",
-      "API access",
-      "Advanced security features",
+      "Até 5 membros do projeto",
+      "Tarefas e projetos ilimitados",
+      "200 GB de armazenamento",
+      "Integrações",
+      "Gerente de conta dedicado",
+      "Campos personalizados",
+      "Análise avançada",
+      "Capacidades de exportação",
+      "Acesso API",
+      "Recursos avançados de segurança",
     ],
   },
 ];
 
 export const Pricing = () => {
-  return null;
+  return (
+    <section className="py-24">
+      <div className="container">
+        <h2 className="section-title ">Planos</h2>
+        <p className="section-description mt-5">Livre para sempre. Atualize para tarefas ilimitadas, melhor segurança e recursos exclusivos.</p>
+        <div className='flex items-center justify-between mt-16'>
+          {pricingTiers.map(({ title, monthlyPrice, buttonText, popular, inverse, features }) => (
+            <div key={title} className='p-10 border border-black/15 rounded-3xl shadow-[0_7px_14px_#EAEAEA]'>
+              <h3 className='text-lg font-bold text-black/50'>{title}</h3>
+              <div>
+                <span className='text-4xl font-bold tracking-tighter'>R${monthlyPrice}</span>
+                <span>/mês</span>
+              </div>
+              <ul className='flex flex-col gap-5 mt-4'>
+                {features.map((feature, index) => (
+                  <li key={index} className="flex items-center gap-2">
+                    <CheckImage className='h-6 w-6' />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+                <button className='btn btn-primary mt-12'>{buttonText}</button>
+            </div>
+          ))}
+
+        </div>
+      </div>
+    </section>
+  );
 };
