@@ -16,8 +16,8 @@ export const ProductShowcase = () => {
         </div>
         <div className='relative'>
           <Image src={productImage} alt='' className='mt-10' />
-          <Image src={pyramidImage} alt='' className='md:block absolute -right-16 -top-16' height={120} width={120}/>
-          <Image src={tubeImage} alt='' className='absolute bottom-7 -left-12' height={90} width={90}/>
+          <Image src={pyramidImage} alt='' className='hidden md:block absolute -right-16 -top-16' height={262} width={262}/>
+          <Image src={tubeImage} alt='' className='absolute bottom-7 -left-14 md:h-[160px] md:w-[160px] ' height={90} width={90}/>
         </div>
       </div>
     </section>

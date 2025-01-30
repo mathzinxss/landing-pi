@@ -29,7 +29,7 @@ export const Header = () => {
         <p className="text-white/60 hidden lg:flex">Simplifique seu fluxo de trabalho e aumente sua produtividade</p>
         <div className="inline-flex gap-1 items-center">
           <p>Começe agora</p>
-          <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" / >
+          <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
         </div>
       </div>
       {/* Navbar Inferior */}
@@ -37,9 +37,9 @@ export const Header = () => {
         <div className='flex justify-between items-center'>
           <div className='flex items-center flex-shrink-0'>
             <Image className='h-10 w-10 mr-2 items-center' src={logo} alt="logo" />
-            <a href='#' className='text-xl tracking-tight hidden lg:flex'>Aretis</a>
+            <a href='#' className='text-xl tracking-tight hidden lg:flex'>Finance 360</a>
           </div>
-          <ul className="hidden lg:flex gap-4">
+          <ul className="hidden lg:flex gap-6">
             {menu.map((data) => (
               <li key={data.id}>
                 <a href={data.link}>{data.name}</a>
@@ -80,5 +80,5 @@ export const Header = () => {
 
       </div>
     </header>
-  );
+  )
 };

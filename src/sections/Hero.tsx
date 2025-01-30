@@ -21,8 +21,7 @@ export const Hero = () => {
             </div>
           </div>
           <div className='mt-20 left-40 md:mt-0 md:h-[648px] md:flex-1 relative'>
-            <Image src={cogImage} alt='Cog image' className=' md:absolute md:h-full md:w-auto md:max-w-none md:-left-6' />
-            <Image src={cylinderImage} alt='' className='hidden md:block -top-6 -left-40 md:absolute' width={220} height={220}/>
+            <Image src={cogImage} alt='Cog image' className='hidden md:block md:absolute md:h-full md:w-auto md:max-w-none md:-left-6' />
           </div>
         </div>
       </div>
