@@ -63,9 +63,9 @@ export const Pricing = () => {
           <h2 className='section-title'>Preços</h2>
           <p className='section-description mt-5'>Livre para sempre. Atualize para tarefas ilimitadas, melhor segurança e recursos exclusivos.</p>
         </div>
-        <div className='flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center'>
+        <div className='flex flex-col gap-6 items-center mt-16 lg:flex-row lg:items-center lg:justify-center'>
           {pricingTiers.map(({ title, monthlyPrice, buttonText, popular, inverse, features }) => (
-            <div className={twMerge('p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full', inverse === true && 'border-black bg-black text-white/60')}>
+            <div className={twMerge('p-10 border border-black/20 rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full', inverse === true && 'border-black bg-black text-white/60')}>
               <div className='flex justify-between'>
                 <h3 className={twMerge('text-lg font-bold textblack/50', inverse === true && 'text-white/60')}>{title}</h3>
                 {popular === true && (
